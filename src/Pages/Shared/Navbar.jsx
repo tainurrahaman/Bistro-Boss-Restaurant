@@ -36,7 +36,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              class="menu menu-sm dropdown-content text-white rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content text-white rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               {links}
             </ul>
@@ -47,7 +47,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <a className="btn hover:bg-red-700 hover:text-white">Button</a>
         </div>
       </div>
     </div>

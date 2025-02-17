@@ -22,7 +22,7 @@ const RecommendMenu = () => {
               Lettuce, Eggs, Parmesan Cheese, Chicken Breast Fillets.
             </p>
             <div className="card-actions">
-              <button className="btn text-[#BB8506] uppercase border-b-2 border-[#BB8506] hover:bg-[#1F2937]">
+              <button className="btn text-[#BB8506] border-0 uppercase border-b-2 border-[#BB8506] hover:bg-[#1F2937]">
                 add to cart
               </button>
             </div>
@@ -42,7 +42,7 @@ const RecommendMenu = () => {
               Cheese,Sausage, Bell Peppers, Onions, Mushrooms, Olives
             </p>
             <div className="card-actions">
-              <button className="btn text-[#BB8506] uppercase border-b-2 border-[#BB8506] hover:bg-[#1F2937]">
+              <button className="btn text-[#BB8506] uppercase border-0 border-b-2 border-[#BB8506] hover:bg-[#1F2937]">
                 add to cart
               </button>
             </div>
@@ -62,7 +62,7 @@ const RecommendMenu = () => {
               Cocoa powder, chocolate chips, dark chocolate, milk chocolate
             </p>
             <div className="card-actions">
-              <button className="btn text-[#BB8506] uppercase border-b-2 border-[#BB8506] hover:bg-[#1F2937]">
+              <button className="btn text-[#BB8506] uppercase border-0 border-b-2 border-[#BB8506] hover:bg-[#1F2937]">
                 add to cart
               </button>
             </div>
@@ -82,7 +82,7 @@ const RecommendMenu = () => {
               Onions, carrots, tomatoes, garlic, mushrooms, peppers
             </p>
             <div className="card-actions">
-              <button className="btn text-[#BB8506] uppercase border-b-2 border-[#BB8506] hover:bg-[#1F2937]">
+              <button className="btn text-[#BB8506] uppercase border-0 border-b-2 border-[#BB8506] hover:bg-[#1F2937]">
                 add to cart
               </button>
             </div>

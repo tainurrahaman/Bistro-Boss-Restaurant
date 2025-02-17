@@ -41,7 +41,10 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <button className="btn px-2 text-sm flex flex-col items-start gap-0 hover:bg-red-700 hover:text-white">
+            <p>BISTRO BOSS</p>
+            <p className="font-normal text-start"> Restaurant</p>
+          </button>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>

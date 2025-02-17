@@ -25,9 +25,9 @@ const PopularMenu = () => {
           <Menu key={item._id} item={item}></Menu>
         ))}
       </div>
-      <div className="flex justify-center mt-12">
+      <div className="flex justify-center mt-16">
         {" "}
-        <button className="btn border border-b-4 border-gray-600">
+        <button className="btn border-0 border-b-4 border-gray-600 hover:bg-[#1F2937] hover:text-white">
           Full Menu
         </button>
       </div>

@@ -6,7 +6,7 @@ const Featured = () => {
       style={{
         backgroundImage: `url(${featuredImg})`,
       }}
-      className="relative bg-cover bg-center mb-20 text-gray-200"
+      className="relative bg-cover bg-fixed bg-center mb-20 text-gray-200"
     >
       <div className="absolute inset-0 bg-black opacity-60"></div>
       <div className="relative z-10 pt-2">
@@ -29,7 +29,7 @@ const Featured = () => {
               courses, desserts, and drinks, with prices and descriptions for
               each item.
             </p>
-            <button className="btn border w-fit border-b-4 border-gray-600">
+            <button className="btn border-0 w-fit border-b-4 border-gray-600 hover:bg-gray-500 hover:text-white">
               Full Menu
             </button>
           </div>

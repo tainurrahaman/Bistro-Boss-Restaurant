@@ -3,6 +3,7 @@ import Main from "../Layouts/Main";
 import Home from "../Layouts/Home/Home";
 import FoodMenu from "../Layouts/FoodMenu/FoodMenu";
 import Order from "../Layouts/Order/Order";
+import Login from "../Pages/Login";
 
 export const router = createBrowserRouter([
   {
@@ -18,8 +19,16 @@ export const router = createBrowserRouter([
         element: <FoodMenu></FoodMenu>,
       },
       {
+        path: "/order",
+        element: <Order></Order>,
+      },
+      {
         path: "/order/:category",
         element: <Order></Order>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
       },
     ],
   },

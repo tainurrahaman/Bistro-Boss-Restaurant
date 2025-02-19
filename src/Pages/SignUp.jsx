@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Helmet } from "react-helmet";
 
 const SignUp = () => {
-  const { createNewUser } = useContext(AuthContext);
+  const { createNewUser, updateUserProfile } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const {
     register,
@@ -18,6 +19,14 @@ const SignUp = () => {
     createNewUser(data.email, data.password).then((result) => {
       const loggedUser = result.user;
       console.log(loggedUser);
+      updateUserProfile(data.name, data.photo)
+        .then(() => {
+          console.log("user profile updated");
+          navigate("/");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     });
   };
 
@@ -49,6 +58,18 @@ const SignUp = () => {
                 />
                 {errors.name && (
                   <span className="text-red-600">Name is required</span>
+                )}
+                <label className="fieldset-label font-bold text-md">
+                  Photo URL
+                </label>
+                <input
+                  {...register("photo", { required: true })}
+                  type="text"
+                  className="input"
+                  placeholder="Enter your Photo URL"
+                />
+                {errors.photo && (
+                  <span className="text-red-600">Photo URL is required</span>
                 )}
                 <label className="fieldset-label font-bold text-md">
                   Email

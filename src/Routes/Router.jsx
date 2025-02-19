@@ -5,6 +5,8 @@ import FoodMenu from "../Layouts/FoodMenu/FoodMenu";
 import Order from "../Layouts/Order/Order";
 import Login from "../Pages/Login";
 import SignUp from "../Pages/SignUp";
+import PrivateRoute from "./PrivateRoute";
+import Secret from "../Pages/Shared/Secret";
 
 export const router = createBrowserRouter([
   {
@@ -34,6 +36,14 @@ export const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp></SignUp>,
+      },
+      {
+        path: "/secret",
+        element: (
+          <PrivateRoute>
+            <Secret></Secret>
+          </PrivateRoute>
+        ),
       },
     ],
   },

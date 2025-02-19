@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   loadCaptchaEnginge,
   LoadCanvasTemplate,
@@ -12,6 +12,8 @@ const Login = () => {
   const { signInUser } = useContext(AuthContext);
   const [disabled, setDisabled] = useState(true);
   const navigate = useNavigate();
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/";
 
   useEffect(() => {
     loadCaptchaEnginge(6);
@@ -26,7 +28,7 @@ const Login = () => {
     signInUser(email, password).then((result) => {
       const user = result.user;
       console.log(user);
-      navigate("/");
+      navigate(from);
     });
   };
 

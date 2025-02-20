@@ -27,6 +27,11 @@ const Navbar = () => {
       <li>
         <Link to="/secret">Secret</Link>
       </li>
+      <li>
+        <button className="btn">
+          Cart <div className="badge badge-md badge-secondary">+0</div>
+        </button>
+      </li>
     </>
   );
   return (

@@ -7,6 +7,7 @@ import {
   validateCaptcha,
 } from "react-simple-captcha";
 import { AuthContext } from "../Provider/AuthProvider";
+import SocialLogin from "../Components/SocialLogin/SocialLogin";
 
 const Login = () => {
   const { signInUser } = useContext(AuthContext);
@@ -103,6 +104,7 @@ const Login = () => {
                 </Link>
               </p>
             </div>
+            <SocialLogin></SocialLogin>
           </div>
         </div>
       </div>

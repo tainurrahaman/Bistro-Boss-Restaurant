@@ -5,6 +5,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { Helmet } from "react-helmet";
 import UseAxiosPublic from "../Hooks/UseAxiosPublic";
 import Swal from "sweetalert2";
+import SocialLogin from "../Components/SocialLogin/SocialLogin";
 
 const SignUp = () => {
   const axiosPublic = UseAxiosPublic();
@@ -145,6 +146,7 @@ const SignUp = () => {
                 </Link>
               </p>
             </div>
+            <SocialLogin></SocialLogin>
           </div>
         </div>
       </div>

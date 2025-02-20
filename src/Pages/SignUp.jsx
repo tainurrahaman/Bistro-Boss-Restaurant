@@ -3,8 +3,11 @@ import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Helmet } from "react-helmet";
+import UseAxiosPublic from "../Hooks/UseAxiosPublic";
+import Swal from "sweetalert2";
 
 const SignUp = () => {
+  const axiosPublic = UseAxiosPublic();
   const { createNewUser, updateUserProfile } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -21,8 +24,22 @@ const SignUp = () => {
       console.log(loggedUser);
       updateUserProfile(data.name, data.photo)
         .then(() => {
-          console.log("user profile updated");
-          navigate("/");
+          const userInfo = {
+            name: data.name,
+            email: data.email,
+          };
+          axiosPublic.post("/users", userInfo).then((res) => {
+            if (res.data.insertedId) {
+              Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Your work has been saved",
+                showConfirmButton: false,
+                timer: 1500,
+              });
+              navigate("/");
+            }
+          });
         })
         .catch((error) => {
           console.log(error);
